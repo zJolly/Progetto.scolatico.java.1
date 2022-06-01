@@ -10,10 +10,12 @@ class ContoSpeciale extends ContoCorrente {
       // verifica la disponibilita' del saldo
       if (importo <= getSaldo()) {
         super.preleva(importo);
-      } else {
+      }
+      else {
         System.out.println("Prelevamento non disponibile.");
       }
-    } else {
+    }
+    else {
       System.out.println("Prelevamento rifiutato");
       System.out.println("Limite superato (200.EURO.MAX)");
     }

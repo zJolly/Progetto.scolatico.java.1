@@ -10,9 +10,14 @@ class ProgContoSpeciale {
         // creazione degli oggetti
         ContoSpeciale conto = new ContoSpeciale();
         System.out.print("Quanto saldo hai: ");
-        double sus = Double.valueOf(tastiera.readLine());
-        conto.setSaldo(sus);
-        Assegno versamento = new Assegno();
+        try{
+            double sus = Double.valueOf(tastiera.readLine());
+            conto.setSaldo(sus);
+        } catch (IOException | NumberFormatException e) {
+            System.out.println("Non hai inserito un numero \"double\"");
+            conto.setSaldo(2000.0);
+            System.out.println("Il saldo è stato impostato a 2000€");
+        }
         // dichiarazione delle variabili
         String valore = "";
         double importo = 0;
@@ -24,6 +29,6 @@ class ProgContoSpeciale {
             conto.stampaSaldo();
         } catch (Exception e) {
             System.out.println(e);
-                    }
+        }
     }
 }
