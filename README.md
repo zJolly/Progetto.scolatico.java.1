@@ -1,2 +1,2 @@
-# Progetto.scolatico.java.1Scho
+# Progetto.scolatico.java.1
 School java project 
